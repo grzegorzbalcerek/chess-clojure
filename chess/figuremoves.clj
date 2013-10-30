@@ -1,6 +1,7 @@
 (ns chess.figuremoves
   "The `chess.figuremoves` namespace contains the functionality for representing
   figure move rules.")
+
 (use 'chess.color)
 (use 'chess.field)
 

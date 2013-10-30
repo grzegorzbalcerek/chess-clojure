@@ -1,4 +1,5 @@
 (ns chess.game)
+
 (use 'chess.color)
 (use 'chess.field)
 (use 'chess.figure)

@@ -1,4 +1,5 @@
 (ns chess.rank)
+
 (use 'chess.game)
 (use 'chess.figure)
 (use 'chess.figuremoves)
@@ -29,7 +30,7 @@
   (quot (count (defended-destinations game (figure-moves figure field true))) 2))
 
 (defn check-rank
-  "Returns a rank value related to whethervthevKing is under check or not."
+  "Returns a rank value related to whether the King is under check or not."
   [game color]
   (if (and (= (game-color game) (other color))
            (is-king-under-check game))
@@ -37,7 +38,7 @@
     0))
 
 (defn color-rank
-  "Calculates the position rank from the point of view of a player."
+  "Calculates the position rank taking one color into account."
   [game color]
   (let [ranks (for [[field figure] (game-board game)
                     :when (= (:figure-color figure) color)
@@ -49,7 +50,7 @@
       (+ (sum ranks) (check-rank game color)))))
 
 (defn rank
-  "Calculates the position rank."
+  "Calculates the position rank from the point of view of a player."
   [game color]
   (- (color-rank game color)
      (color-rank game (other color))))

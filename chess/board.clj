@@ -1,6 +1,7 @@
 (ns chess.board
   "The `chess.board` namespace contains the functionality for representing
   the game board.")
+
 (use 'chess.field)
 (use 'chess.figure)
 (use 'chess.move)

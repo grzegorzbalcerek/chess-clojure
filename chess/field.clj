@@ -7,6 +7,7 @@
   It has members representing the column and the row —
   the field coordinates on the chess board.
   Valid fields have coordinates in the range between 1 and 8.")
+
 (use 'chess.color)
 
 (defrecord Field [^Integer col ^Integer row])
